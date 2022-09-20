@@ -1,0 +1,84 @@
+@import "../src/responsive";
+
+
+.Error{
+    text-align: center;
+    
+    .h1_404{
+        color: #272727;
+        font-size: 400px;
+        margin: 50px 0 20px 0;
+
+        @include desktopExtraLarge{
+            font-size: 300px;
+
+
+            @include large{
+                font-size: 250px;
+
+                @include medium{
+                    font-size: 200px;
+
+                    @include small{
+                        font-size: 100px;
+                    }
+                }
+            }
+        }
+
+        span{
+            color: #FFD600;
+        }
+    }
+
+    .ups_error{
+        font-size: 55px;
+        margin: 0 0 35px 0;
+        color: #272727;
+        text-align: center;
+
+        @include large{
+            font-size: 45px;
+
+            @include small{
+                font-size: 21px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+
+    .just_error{
+        font-size: 40px;
+        color: #272727;
+        margin-bottom: 35px;
+        text-align: center;
+
+        @include large{
+            font-size: 35px;
+
+            @include small{
+                font-size: 15px;
+                margin-bottom: 12px;
+            }
+        }
+
+    }
+
+    .use_mavigation{
+        font-size: 30px;
+        text-align: center;
+
+        @include large{
+            font-size: 25px;
+
+            @include small{
+                font-size: 15px;
+                margin: 0 20px;
+                line-height: 19px;
+            }
+        }
+        
+       
+    }
+}

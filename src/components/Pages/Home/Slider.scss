@@ -1,0 +1,2064 @@
+ $btn-color: #FFD600;
+ $color-seconds: #272727;
+ $width: 1420px;
+
+ @import "../../../responsive";
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+ @mixin btn{
+     border: 0;
+     background-color: transparent;
+     cursor: pointer;
+ }
+ 
+@mixin btn_click{
+    width: 300px;
+    height: 50px;
+    background-color: $btn-color;
+    color: $color-seconds;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+@mixin btn_click2($background){
+    width: 300px;
+    height: 51px;
+    background-color: $background;
+    color: $color-seconds;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+.center{
+    width: 100%;
+    max-width: $width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+   
+}
+
+
+.active_slide{
+    color: $btn-color;
+}
+
+
+
+
+.section_slider{
+    position: relative;
+    margin-top: 87px;
+    grid-column: 1/13;
+
+    @include desktopExtraExtraLarge{
+        
+
+        @include small{
+            margin-top: 52px;
+        }
+    }
+    
+
+    .center_slider{
+        position: relative;
+        padding-top: 70px;
+        width: 40%;
+
+        @include desktopExtraExtraLarge{
+            width: 35%;
+
+
+            @include desktopExtraLarge{
+                width: 35%;
+    
+                @include large{
+                    padding: 0;
+                    width: 100%;
+                }
+            }
+        }
+
+
+
+
+        .right{
+            grid-column: 1/6;
+
+            @include desktopExtraExtraLarge{
+                grid-column: 1/7;
+
+                @include large{
+                    grid-column: 1/13;
+
+                }
+            }
+
+            h1{
+                margin-bottom: 36px;
+
+                @include desktopExtraLarge{
+
+                    font-size: 36px;
+
+                    @include large{
+                        grid-column: 1/13;
+                        font-size: 22px;
+                        margin-bottom: 15px;
+                        font-size: 56px;
+    
+                        @include medium{
+                            font-size: 30px;
+    
+                            @include small{
+                                font-size: 20px;
+                                margin-right: 27px;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            p{
+                font-family: Open Sans;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 38px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-bottom: 36px;
+
+                @include desktopExtraExtraLarge{
+                   font-size: 24px;
+                   width: 450px;
+
+                   @include desktopExtraLarge{
+                       font-size: 20px;
+                       line-height: 26px;
+                       width: 100%;
+
+
+                       @include large{
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        line-height: 26px;
+                        width: 100%;
+                        margin-bottom: 30px;
+    
+    
+                        @include small{
+                            font-size: 12px;
+                            line-height: 16px;
+                            font-weight: 400;
+                            font-family: 'Open Sans', sans-serif;
+    
+                        }
+                        
+                        
+                    }
+
+                   }
+
+                }
+            }
+
+            .btn{
+                display: block;
+
+                button{
+
+                    @include btn_click;
+                    margin-bottom: 54px;
+                    display: block;
+
+                    @include large{
+                        display: none;
+                        
+                    }
+                }
+            }
+
+
+
+            
+
+            .indicator{
+                display: flex;
+                align-items: center;
+
+                @include large{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                button{
+                    display: flex;
+                    align-items: center;
+                    width: 3rem;
+                    cursor: pointer;
+                    overflow: hidden;
+                    transition: 0.2s linear;
+                    @include btn;
+                    margin-right: 5px;
+
+                    @include large{
+                        display: block;
+                        overflow: hidden;
+                        width: 2rem;
+                        transition: none;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    &:first-of-type {
+                        justify-content: flex-start;
+
+                        @include large{
+                            display: flex;
+                            justify-content: flex-start;
+                        }
+                    }
+                    
+                    &:last-of-type {
+                        justify-content: flex-end;
+
+                        @include large{
+                            display: flex;
+                            justify-content: flex-end;
+                        }
+                    }
+
+                
+
+
+                    &:hover{
+                        width: 4.3rem;
+                    }
+
+
+                    @include large{
+                        &:hover{
+                            width: 2rem;
+                        }
+                    }
+
+
+                    .slider__button-inner{
+                        
+
+                        svg{
+                            path{
+                                transition: .2s linear;
+                            }
+                        }
+
+                        &:hover{
+                            svg{
+                                path{
+                                    fill-Opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                 
+
+                }
+
+                
+            }
+
+        }
+
+
+
+       
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .right_img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 45%;
+        height: 646px;
+        z-index: -1;
+        display: none;
+
+
+        @include desktopExtraExtraLarge{
+            right: -10%;
+            display: none;
+
+
+            @include desktopExtraLarge{
+                width: 55%;
+                right: 0;
+                display: none;
+
+
+                @include large{
+                    grid-column: 1/13 ;
+                    position: relative;
+                    grid-row: 2;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    height: 100%;
+                    display: block;
+                    
+    
+                }
+            }
+
+        }
+
+
+        .photo, .animated{
+            position: relative;
+            height: 100%;
+
+            
+
+            @include desktopExtraExtraLarge{
+                height: 100%;
+
+
+            }
+           
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+
+
+            .animated_photo{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                @include small{
+                    display: none;
+                }
+
+
+                .animation_top{
+                    position: absolute;
+                    z-index: 20;
+                    top: 6vw;
+                    left: 19vw;
+                    animation-name: page_animation;
+                    animation-fill-mode: forwards;
+                    animation-duration: 1s;
+
+                    @include desktopExtraExtraLarge{
+                        top: 10vw;
+                       left: 15vw;
+
+                       @include large{
+                        top: 8vw;
+                        left: 32vw;
+                    }
+                    }
+    
+
+                    .circle_animation{
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 100px;
+                        background-color: white;
+                        border: 8px solid #FFD600;
+                        box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                        .line_animation{
+                            position: absolute;
+                            width: 251px;
+                            height: 2px;
+                            background-color: white;
+                            top: 50%;
+
+
+                            @include large{
+                                width: 140px;
+                            }
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                width: 95px;
+                                transform: rotate(45deg);
+                                top: 33px;
+                                left: 94%;
+
+                                @include large{
+                                    left: 90%;
+                                }
+                                } 
+    
+                           
+                        }
+                    }
+
+
+
+                }
+
+
+                @keyframes page_animation {
+                    from { 
+                        opacity: 0;
+                    } 
+                    to { 
+                        opacity: 1;
+                    } 
+                    
+                }
+
+
+                .text_animation{
+                    position: absolute;
+                    top: 100px;
+                    left: 250px;
+
+                    @include large{
+                        left: 140px;
+                    }
+
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+                }
+
+
+
+
+                .animation_bottom{
+                    position: absolute;
+                    z-index: 20;
+                    top: 22vw;
+                    left: 19vw;
+
+                    @include desktopExtraExtraLarge{
+                        top: 30vw;
+                        left: 15vw;
+
+                        @include large{
+                            top: 42vw;
+                           left: 32vw;
+                        }
+                    }
+                    
+                    
+                    
+
+                    .circle_animation{
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 100px;
+                        background-color: white;
+                        border: 8px solid #FFD600;
+                        box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                        .line_animation{
+                            position: absolute;
+                            width: 114px;
+                            height: 2px;
+                            background-color: white;
+                            top: 50%;
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                width: 95px;
+                                transform: rotate(-25deg);
+                                top: -20px;
+                                left: 95%;
+                                } 
+    
+                           
+                        }
+                    }
+
+
+                    .text_animation_bottom{
+                        position: absolute;
+                        top: -59px;
+                        left: 118px;
+                        
+                        p{
+                            color: white;
+                            white-space: nowrap;
+                        }
+
+                    }
+
+                }
+
+                .animation_delay_button{
+                    animation-name: page_animation;
+                    animation-fill-mode: forwards;
+                    animation-duration: 3s;
+        
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            .animated_photo2{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                @include small{
+                    display: none;
+                }
+
+
+                .animation_top2{
+                    position: absolute;
+                    z-index: 20;
+                    top: 4vw;
+                    left: 25vw;
+                    animation-name: page_animation;
+                    animation-fill-mode: forwards;
+                    animation-duration: 1s;
+
+                    @include large{
+                        top: 6vw;
+                        left: 41vw;
+                    }
+    
+
+                    .circle_animation2{
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 100px;
+                        background-color: white;
+                        border: 8px solid #FFD600;
+                        box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                        .line_animation2{
+                            position: absolute;
+                            width: 251px;
+                            height: 2px;
+                            background-color: white;
+                            top: 50%;
+
+                            @include large{
+                                width: 146px;
+                            }
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                width: 95px;
+                                transform: rotate(45deg);
+                                top: 33px;
+                                left: 94%;
+
+                                @include large{
+                                    left: 90%;
+                                }
+                                } 
+    
+                           
+                        }
+                    }
+
+
+
+                }
+
+
+                @keyframes page_animation {
+                    from { 
+                        opacity: 0;
+                    } 
+                    to { 
+                        opacity: 1;
+                    } 
+                    
+                }
+
+
+                .text_animation2{
+                    position: absolute;
+                    top: 100px;
+                    left: 250px;
+
+                    @include large{
+                        left: 121px;
+                    }
+
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+                }
+
+
+
+
+                .animation_bottom2{
+                    position: absolute;
+                    z-index: 20;
+                    top: 22vw;
+                    left: 25vw;
+
+                    @include large{
+
+                    top: 44vw;
+                    left: 40vw;
+                        
+                    }
+                    
+                    
+                    
+
+                    .circle_animation2{
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 100px;
+                        background-color: white;
+                        border: 8px solid #FFD600;
+                        box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                        .line_animation2{
+                            position: absolute;
+                            width: 114px;
+                            height: 2px;
+                            background-color: white;
+                            top: 50%;
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                width: 95px;
+                                transform: rotate(-25deg);
+                                top: -20px;
+                                left: 95%;
+                                } 
+    
+                           
+                        }
+                    }
+
+
+                    .text_animation_bottom2{
+                        position: absolute;
+                        top: -59px;
+                        left: 118px;
+
+                        
+                    @include large{
+
+                       
+                        left: 90px;
+                            
+                        }
+                        
+                        p{
+                            color: white;
+                            white-space: nowrap;
+                        }
+
+                    }
+
+                }
+
+                .animation_delay_button2{
+                    animation-name: page_animation;
+                    animation-fill-mode: forwards;
+                    animation-duration: 3s;
+        
+                }
+
+
+                .fii_in_siguranta{
+                    animation-name: page_animation;
+                    animation-fill-mode: forwards;
+                    animation-duration: 4s;
+                    position: absolute;
+                    z-index: 20;
+                    top: 13vw;
+                    left: 20vw;
+
+                    @include large{
+                        top: 23vw;
+                        left: 34vw;
+                    }
+
+                    .circle_animation2{
+                        position: absolute;
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 100px;
+                        background-color: white;
+                        border: 8px solid #FFD600;
+                        box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                        .line_animation2{
+                            position: absolute;
+                            width: 114px;
+                            height: 2px;
+                            background-color: white;
+                            bottom: 50%;
+                            right: 100%;
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                width: 50px;
+                                transform: rotate(90deg);
+                                right: 79%;
+                                top: -24px;
+                                } 
+    
+                           
+                        }
+                    }
+
+
+                    .text_animation_bottom2{
+                        position: absolute;
+                        top: -61px;
+                        left: -180px;
+                        
+                        p{
+                            color: white;
+                            white-space: nowrap;
+                        }
+
+                    }
+
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            .animated_photo4{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                @include small{
+                    display: none;
+                }
+
+                .animation_top4{
+                    position: absolute;
+                    z-index: 20;
+                    top: 7vw;
+                    left: 27vw;
+                    animation-name: page_animation;
+                    animation-fill-mode: forwards;
+                    animation-duration: 1s;
+
+                    @include large{
+                        top: 5vw;
+                        left: 44vw;
+                    }
+    
+
+                    .circle_animation4{
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 100px;
+                        background-color: white;
+                        border: 8px solid #FFD600;
+                        box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                        .line_animation4{
+                            position: absolute;
+                            width: 251px;
+                            height: 2px;
+                            background-color: white;
+                            top: 50%;
+
+                            @include large{
+                                width: 140px;
+                            }
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                width: 47px;
+                                transform: rotate(90deg);
+                                top: 23px;
+                                left: 91%;
+
+                                @include large{
+                                    left: 84%;
+                                }
+                                } 
+    
+                           
+                        }
+                    }
+
+
+
+                }
+
+
+                @keyframes page_animation {
+                    from { 
+                        opacity: 0;
+                    } 
+                    to { 
+                        opacity: 1;
+                    } 
+                    
+                }
+
+
+                .text_animation4{
+                    position: absolute;
+                    top: 71px;
+                    left: 180px;
+
+                    @include large{
+                        left: 90px;
+                    }
+
+                    
+
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+                }
+
+
+
+
+                .animation_bottom4{
+                    position: absolute;
+                    z-index: 20;
+                    top: 14vw;
+                    left: 27vw;
+
+                    @include large{
+                        top: 28vw;
+                        left: 44vw;
+                    }
+                    
+                    
+                    
+
+                    .circle_animation4{
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 100px;
+                        background-color: white;
+                        border: 8px solid #FFD600;
+                        box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                        .line_animation4{
+                            position: absolute;
+                            width: 114px;
+                            height: 2px;
+                            background-color: white;
+                            top: 50%;
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                width: 95px;
+                                transform: rotate(45deg);
+                                top: 34px;
+                                left: 88%;
+                                } 
+    
+                           
+                        }
+                    }
+
+
+                    .text_animation_bottom4{
+                        position: absolute;
+                        top: 97px;
+                        left: 118px;
+                        
+                        p{
+                            color: white;
+                            white-space: nowrap;
+                        }
+
+                    }
+
+                }
+
+                .animation_delay_button4{
+                    animation-name: page_animation;
+                    animation-fill-mode: forwards;
+                    animation-duration: 3s;
+        
+                }
+
+
+                .fii_in_siguranta4{
+                    animation-name: page_animation;
+                    animation-fill-mode: forwards;
+                    animation-duration: 2s;
+                    position: absolute;
+                    z-index: 20;
+                    top: 23vw;
+                    left: 23vw;
+
+                    @include large{
+                        top: 37vw;
+                        left: 37vw;
+                    }
+
+                    .circle_animation4{
+                        position: absolute;
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 100px;
+                        background-color: white;
+                        border: 8px solid #FFD600;
+                        box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                        .line_animation4{
+                            position: absolute;
+                            width: 100px;
+                            height: 2px;
+                            background-color: white;
+                            bottom: 50%;
+                            right: 100%;
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                width: 50px;
+                                transform: rotate(45deg);
+                                right: 92%;
+                                top: -18px;
+                                } 
+    
+                           
+                        }
+                    }
+
+
+                    .text_animation_bottom4{
+                        position: absolute;
+                        top: -45px;
+                        left: -169px;
+                        
+                        p{
+                            color: white;
+                            white-space: nowrap;
+                        }
+
+                    }
+
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .section_instruments_bottom{
+        margin-top: 75px;
+        display: flex;
+        gap: 2.5em;
+
+        @include large{
+
+            display: none;
+
+            @include medium{
+    
+                display: none;
+                
+                @include small{
+                    display: none;
+                }
+            }
+
+        }
+
+
+
+
+        .first_item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.08);
+            position: relative;
+
+
+            
+
+              .img{
+                  width: 70%;
+              }
+
+
+            .hover_item{
+                display: none;
+            }
+
+
+            &:hover .hover_item{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #FFD600;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+
+                .img{
+                    opacity: .2;
+                    position: absolute;
+                    width: 70%;
+                   
+                }
+                
+
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    li{
+                        width: 66px;
+                        height: 66px;
+                        background-color: $color-seconds;
+                        border-radius: 100px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin:  0 15px;
+                        cursor: pointer;
+                        z-index: 1;
+                        
+
+
+                        img{
+                            font-weight: 400;
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+        .number_slider{
+            display: flex;
+            align-self: center;
+
+            ul{
+                display: flex;
+
+                li{
+                    margin-right: 31px;
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: rgba(39, 39, 39, 0.50);
+                    font-family: 'Montserrat', sans-serif;
+                    
+                }
+            }
+        }
+    }
+
+
+
+    .btn-link{
+        display: none;
+
+        @include large{
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+
+        
+
+        button{
+            @include btn_click2($color-seconds);
+            background-color: $btn-color;
+            color: $color-seconds;
+
+            @include large{
+                font-size: 18px;
+                margin: 25px 0 45px 0;
+                @include medium{
+
+                    font-size: 16px;
+                    width: 160px;
+
+                    @include small{
+                        width: 160px;
+                        height: 40px;
+                        font-size: 14px;
+                        
+                    }
+                }
+
+            }
+            
+        }
+
+       
+       
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.img_out_grid{
+    position: absolute;
+    top: 12.5em;
+    right: 0;
+    width: 55%;
+    height: 646px;
+    z-index: -1;
+    display: block;
+
+
+
+    @include desktopExtraExtraLarge{
+        top: 12.5em;
+        width: 55%;
+        
+
+        @include desktopExtraLarge{
+            position: absolute;
+            width: 55%;
+            top: 12.5em;
+            height: 40.625em;
+            
+            
+
+
+            @include large{
+                
+                display: none;
+                
+            }
+        }
+
+    }
+
+
+    .photo, .animated{
+        position: relative;
+        height: 100%;
+
+        @include desktopExtraExtraLarge{
+            height: 100%;
+
+        }
+
+
+        .img_right{
+            position: absolute;
+            opacity: 0.3;
+            transition: opacity ease-in-out 1s ease-in-out;
+            height: 100%;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+               
+    
+                @include desktopExtraLarge{
+                    height: 100%;
+                }
+            }
+
+            
+        }
+
+
+        
+
+
+
+        .img_right.active{
+            opacity: 1;
+            transition-duration: 1s;
+            
+
+        }
+
+
+
+        
+
+
+       
+
+
+
+
+
+
+
+
+        .animated_photo{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            @include small{
+                display: none;
+            }
+
+
+            .animation_top{
+                position: absolute;
+                z-index: 20;
+                top: 6vw;
+                left: 18vw;
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 1s;
+
+                @include desktopExtraExtraLarge{
+                    top: 10vw;
+                   left: 15vw;
+
+                   @include desktopExtraLarge{
+
+                    top: 11vw;
+                   left: 11vw;
+
+                   }
+                }
+
+
+                .circle_animation{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation{
+                        position: absolute;
+                        width: 251px;
+                        height: 2px;
+                        background-color: white;
+                        top: 50%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 95px;
+                            transform: rotate(45deg);
+                            top: 33px;
+                            left: 94%;
+                            } 
+
+                       
+                    }
+                }
+
+
+
+            }
+
+
+            @keyframes page_animation {
+                from { 
+                    opacity: 0;
+                } 
+                to { 
+                    opacity: 1;
+                } 
+                
+            }
+
+
+            .text_animation{
+                position: absolute;
+                top: 100px;
+                left: 250px;
+
+                p{
+                    color: white;
+                    white-space: nowrap;
+                }
+            }
+
+
+
+
+            .animation_bottom{
+                position: absolute;
+                z-index: 20;
+                top: 26vw;
+                left: 18vw;
+
+
+
+                @include desktopExtraExtraLarge{
+                    top: 30vw;
+                    left: 15vw;
+
+
+                    @include desktopExtraLarge{
+
+                        top: 40vw;
+                       left: 11vw;
+
+                    }
+    
+                }
+                
+                
+                
+
+                .circle_animation{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation{
+                        position: absolute;
+                        width: 114px;
+                        height: 2px;
+                        background-color: white;
+                        top: 50%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 95px;
+                            transform: rotate(-25deg);
+                            top: -20px;
+                            left: 95%;
+                            } 
+
+                       
+                    }
+                }
+
+
+                .text_animation_bottom{
+                    position: absolute;
+                    top: -59px;
+                    left: 118px;
+                    
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+
+                }
+
+            }
+
+            .animation_delay_button{
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 3s;
+    
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .animated_photo2{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            @include desktopExtraExtraLarge{
+
+                @include small{
+                    display: none;
+                }
+            }
+
+
+
+            .animation_top2{
+                position: absolute;
+                z-index: 20;
+                top: 4vw;
+                left: 25vw;
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 1s;
+
+                @include desktopExtraExtraLarge{
+
+                    top: 7vw;
+                    left: 23vw;
+                    
+                }
+
+
+                .circle_animation2{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation2{
+                        position: absolute;
+                        width: 251px;
+                        height: 2px;
+                        background-color: white;
+                        top: 50%;
+                        left: 94%;
+
+                        @include desktopExtraExtraLarge{
+                           width: 215px;
+
+                           @include desktopExtraLarge{
+                               width: 134px;
+                           }
+                            
+                        }
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 95px;
+                            transform: rotate(45deg);
+                            top: 33px;
+                            left: 94%;
+
+                            @include desktopExtraLarge{
+                                left: 90%;
+                            }
+                            } 
+
+                       
+                    }
+                }
+
+
+
+            }
+
+
+            @keyframes page_animation {
+                from { 
+                    opacity: 0;
+                } 
+                to { 
+                    opacity: 1;
+                } 
+                
+            }
+
+
+            .text_animation2{
+                position: absolute;
+                top: 100px;
+                left: 250px;
+
+                @include desktopExtraExtraLarge{
+
+                    left: 199px;
+
+
+                    @include desktopExtraLarge{
+                        left: 113px;
+                    }
+                     
+                 }
+
+                p{
+                    color: white;
+                    white-space: nowrap;
+                }
+            }
+
+
+
+
+            .animation_bottom2{
+                position: absolute;
+                z-index: 20;
+                top: 22vw;
+                left: 25vw;
+
+                @include desktopExtraExtraLarge{
+                    top: 39vw;
+                    left: 23vw; 
+                }
+                
+                
+                
+
+                .circle_animation2{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation2{
+                        position: absolute;
+                        width: 114px;
+                        height: 2px;
+                        background-color: white;
+                        top: 50%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 95px;
+                            transform: rotate(-25deg);
+                            top: -20px;
+                            left: 95%;
+                            } 
+
+                       
+                    }
+                }
+
+
+                .text_animation_bottom2{
+                    position: absolute;
+                    top: -59px;
+                    left: 118px;
+                    
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+
+                }
+
+            }
+
+            .animation_delay_button2{
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 3s;
+    
+            }
+
+
+            .fii_in_siguranta{
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 4s;
+                position: absolute;
+                z-index: 20;
+                top: 13vw;
+                left: 20vw;
+
+                @include desktopExtraExtraLarge{
+                    top: 22vw;
+                    left: 19vw; 
+                }
+
+                .circle_animation2{
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation2{
+                        position: absolute;
+                        width: 114px;
+                        height: 2px;
+                        background-color: white;
+                        bottom: 50%;
+                        right: 100%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 50px;
+                            transform: rotate(90deg);
+                            right: 79%;
+                            top: -24px;
+                            } 
+
+                       
+                    }
+                }
+
+
+                .text_animation_bottom2{
+                    position: absolute;
+                    top: -61px;
+                    left: -180px;
+                    
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+
+                }
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .animated_photo4{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            @include small{
+                display: none;
+            }
+
+            .animation_top4{
+                position: absolute;
+                z-index: 20;
+                top: 5vw;
+                left: 27vw;
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 1s;
+
+                @include desktopExtraExtraLarge{
+                    left: 26vw;
+                }
+
+
+                .circle_animation4{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation4{
+                        position: absolute;
+                        width: 251px;
+                        height: 2px;
+                        background-color: white;
+                        top: 50%;
+
+                        @include desktopExtraLarge{
+                            width: 171px;
+                        }
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 47px;
+                            transform: rotate(90deg);
+                            top: 23px;
+                            left: 91%;
+
+                            @include desktopExtraLarge{
+                                left: 87%;
+                            }
+                            } 
+
+                       
+                    }
+                }
+
+
+
+            }
+
+
+            @keyframes page_animation {
+                from { 
+                    opacity: 0;
+                } 
+                to { 
+                    opacity: 1;
+                } 
+                
+            }
+
+
+            .text_animation4{
+                position: absolute;
+                top: 71px;
+                left: 180px;
+
+                @include desktopExtraLarge{
+                    left: 105px;
+                }
+
+                p{
+                    color: white;
+                    white-space: nowrap;
+                }
+            }
+
+
+
+
+            .animation_bottom4{
+                position: absolute;
+                z-index: 20;
+                top: 14vw;
+                left: 27vw;
+
+                @include desktopExtraExtraLarge{
+                    left: 26vw;
+                    top: 19vw;
+                }
+                
+                
+                
+
+                .circle_animation4{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation4{
+                        position: absolute;
+                        width: 114px;
+                        height: 2px;
+                        background-color: white;
+                        top: 50%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 95px;
+                            transform: rotate(45deg);
+                            top: 34px;
+                            left: 88%;
+                            } 
+
+                       
+                    }
+                }
+
+
+                .text_animation_bottom4{
+                    position: absolute;
+                    top: 97px;
+                    left: 118px;
+                    
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+
+                }
+
+            }
+
+            .animation_delay_button4{
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 3s;
+    
+            }
+
+
+            .fii_in_siguranta4{
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 2s;
+                position: absolute;
+                z-index: 20;
+                top: 23vw;
+                left: 23vw;
+
+                @include desktopExtraExtraLarge{
+                    top: 37vw;
+                }
+
+                .circle_animation4{
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation4{
+                        position: absolute;
+                        width: 100px;
+                        height: 2px;
+                        background-color: white;
+                        bottom: 50%;
+                        right: 100%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 50px;
+                            transform: rotate(45deg);
+                            right: 92%;
+                            top: -18px;
+                            } 
+
+                       
+                    }
+                }
+
+
+                .text_animation_bottom4{
+                    position: absolute;
+                    top: -45px;
+                    left: -169px;
+                    
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+
+                }
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+    
+}
+
+
+

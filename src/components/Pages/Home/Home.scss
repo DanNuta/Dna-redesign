@@ -1,0 +1,1795 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+$btn-color: #FFD600;
+$color-seconds: #272727;
+
+@import "../../../responsive";
+
+@mixin btn{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@mixin btn_click($background){
+    width: 300px;
+    height: 51px;
+    background-color: $background;
+    color: $color-seconds;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+ 
+
+
+
+.h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 122%;
+    color: $color-seconds;
+    margin-top: 115px;
+    
+}
+
+section{
+    margin-top: 115px;
+}
+
+.p{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: left;
+    
+}
+
+.center{
+    width: 100%;
+    max-width: 1420px;
+    margin: 115px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+}
+
+
+
+
+/*--------coockie----------- */
+
+
+
+
+
+
+/*-------- end-coockie----------- */
+
+
+
+.section-center1{
+    margin-top: 115px;
+
+
+    @include desktopExtraExtraLarge{
+        margin: 115px auto 0 auto;
+
+
+        @include small{
+            margin: 110px 0 0 0;
+        }
+    }
+
+    .dns-paratrasnet{
+
+        position: relative;
+        
+        .text-images{
+            display: none;
+
+            @include small{
+                background-color: $btn-color;
+                grid-column: 4/13;
+                height: 63px;
+                z-index: 999;
+                display: flex;
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                bottom: 0;
+                width: 100%;
+
+                span{
+                    font-size: 12px;
+                    line-height: 16px;
+
+                    h3{
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 700;
+
+                    }
+                }
+                
+   
+            }
+
+
+        }
+
+        .mobile_h1_center{
+            display: none;
+
+            @include small{
+                display: block;
+                grid-column: 1/13;
+                grid-row: 1;
+                margin-bottom: 30px;
+                font-size: 20px;
+
+            }
+        }
+
+
+        
+
+        .left-part{
+            grid-column: 1/5;
+
+            @include medium{
+                grid-column: 1/7;
+                height: 500px;
+                object-fit: cover;
+
+                @include small{
+                    height: 250px;
+                }
+            }
+
+            .text-images{
+                @include large{
+                    background-color: $btn-color;
+                    text-align: center;
+                    height: 63px;
+                    z-index: 10;
+                    position: relative;
+                    grid-row: 2/-1;
+                    height: 100%;
+                   
+
+                     @include small{
+                        background-color: $btn-color;
+                    text-align: center;
+                    height: 63px;
+                    z-index: 10;
+                    position: relative;
+                    grid-row: 2/-1;
+                    height: 100%;
+                   
+
+                     }
+
+                   
+                }
+
+
+            }
+
+            img{
+                width: 100%;
+                margin-bottom: 38px;
+
+                @include large{
+                    height: 100%;
+                    min-height: 80%;
+                    margin-bottom: 20px;
+                    object-fit: cover;
+                    
+                  
+                }
+            }
+        }
+
+
+
+
+
+        .right-part{
+            grid-column: 6/13;
+            margin-top: 114px;
+
+            @include desktopExtraExtraLarge{
+                margin-top: 30px;
+
+               @include large{
+
+                  grid-column: 5/13;
+
+                @include medium{
+                    grid-column: 7/13;
+                }
+               }
+            }
+
+            .right-text{
+                width: 90%;
+                margin-left: -84px;
+
+                @include large{
+                    margin: 0;
+                }
+
+                h1{
+                    margin-bottom: 50px;
+
+                    @include desktopExtraExtraLarge{
+                       width: 100%;
+                       font-size: 40px;
+
+
+                       @include large{
+                           font-size: 30px;
+
+                           @include small{
+                               display: none;
+                           }
+                       }
+                    }
+                }
+
+                p{
+                    margin-bottom: 40px;
+
+                    @include large{
+                        width: 100%;
+
+                        @include small{
+                            font-family: 'Open Sans', sans-serif;
+                            font-size: 12px;
+                            line-height: 16px;
+                            font-family: sans-serif;
+                            font-weight: 400;
+                            display: flex;
+                        }
+
+
+                      
+                    }
+
+                    
+                }
+
+                button{
+                    margin-bottom: 88px;
+                    @include btn;
+
+                    @include large{
+                        
+
+                        @include medium{
+                            display: block;
+
+                            @include small{
+                                display: none;
+                            }
+                            
+                        }
+                        
+                    }
+
+                    .btn-link{
+                        display: flex;
+                        align-content: center;
+
+                       @include small{
+                           justify-content: flex-start;
+                       }
+                    }
+
+                    
+                    
+
+                    h2{
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 700;
+                        font-size: 18px;
+                        margin-right: 15px;
+                        color: $color-seconds;
+
+                        @include medium{
+                            font-size: 14px;
+                        }
+                    }
+
+                    img{
+                        align-self: center;
+                    }
+                }
+            }
+
+            .img-right{
+                position: relative;
+
+                img{
+                    max-width: 100%;
+
+                    @include large{
+                        display: none;
+                    }
+                }
+
+                .text-images-top{
+                    width: 272px;
+                    height: 164px;
+                    background-color: $btn-color;
+                    position: absolute;
+                    top: -105px;
+                    right: 46px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+
+                    @include large{
+                        display: none;
+                      
+                    }
+
+                    span{
+                        font-weight: 300;
+                        font-size: 18px;
+                        padding: 0 52px;
+                        line-height: 25px;
+
+                        @include large{
+                            width: 300%;font-size: 12px;
+                            line-height: 16px;
+                            padding: 0;
+                          
+                        }
+
+                        h3{
+
+                    
+                        font-weight: 700;
+                       
+
+                    
+                        }
+
+                    }
+
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.despre_noi{
+    margin-top: 115px;
+
+    @include desktopExtraExtraLarge{
+        width: 90% !important;
+        margin: auto;
+
+        @include large{
+
+            margin-top: 45px !important;
+            
+
+            @include medium{
+                margin-top: 45px !important;
+    
+                @include small{
+                    margin-top: 45px !important;
+                }
+            }
+        }
+
+        
+
+        
+
+        
+
+       
+    }
+
+    h1{
+        text-transform: uppercase;
+        grid-column: 1 / span 4;
+
+        @include desktopExtraExtraLarge{
+            grid-column: 1/13;
+            margin: 0;
+
+            @include large{
+                margin-bottom: 30px;
+
+                @include medium{
+                    font-size: 20px;
+                    margin: 0 0 30px 0;
+    
+                    @include small{
+                        margin-bottom: 30px;
+                        
+    
+                    }
+                }
+            }
+        }
+    }
+
+
+    .despre_noi_right{
+        grid-column: 1 / span 4;
+        margin-top: 55px;
+
+        @include large{
+            display: block;
+            grid-column: 1/13;
+            display: flex;
+            flex-direction: column-reverse;
+            margin: 0;
+
+            @include small{
+                grid-row: 2;
+                margin: 0;
+            }
+
+
+        }
+
+       
+        
+
+        .h1_bg{
+            width: 253px;
+            height: 144px;
+            background-color: $btn-color;
+            margin-bottom: 47px;
+
+            @include large{
+                margin: 20px 0;
+
+                @include medium{
+                    width: 100px;
+                    height: 62px;
+                    margin: 30px 0 20px 0;
+    
+                    @include small{
+                        margin: 20px 0;
+                    }
+                    
+                }
+            }
+           
+            
+            
+
+            h1{
+                font-size: 90px;
+                font-weight: 800;
+                padding: 17px 0 0px 34px;
+
+                @include medium{
+                    font-size: 30px;
+                    padding: 14px 0 0 34px;
+                }
+            }
+
+            
+
+
+
+            
+        }
+
+
+        p{
+
+            @include small{
+                font-family: 'Open Sans', sans-serif;
+                font-size: 12px;
+                line-height: 16px;
+                font-family: sans-serif;
+                font-weight: 400;
+                display: block;
+            }
+        }
+
+        
+    }
+
+
+    .despre_noi_left{
+        grid-column: 5 / span 12;
+        margin-top: 55px;
+
+      
+
+        @include desktopExtraExtraLarge{
+            grid-column: 6/13;
+
+            @include large{
+                display: block;
+                grid-column: 1/13;
+                width: 100%;
+                display: flex;
+                flex-direction: column-reverse;
+                margin: 0;
+
+
+                @include small{
+                    margin: 0;
+                }
+                
+            }
+        }
+
+        p{
+            margin-bottom: 44px;
+
+            @include medium{
+
+                margin: 0;
+
+                @include small{
+                    margin: 0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 12px;
+                    line-height: 16px;
+                    font-family: sans-serif;
+                    font-weight: 400;
+                    display: block;
+                }
+            }
+
+               
+                
+            
+        }
+
+        img{
+            width: 100%;
+
+            @include large{
+                height: 146px;
+                margin-bottom: 20px;
+                
+            }
+        }
+    }
+
+     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.ce_oferim{
+    margin-top: 115px;
+
+
+
+    @include desktopExtraExtraLarge{
+       width: 90% !important;
+       margin: 115px  auto 0 auto;
+
+       
+
+
+      
+
+       
+    }
+
+    h1{
+        grid-column: 1/13;
+        
+
+       @include large{
+           margin: 0;
+
+        @include medium{
+            font-size: 20px;
+            margin: 45px 0 25px 0 ;
+
+           
+        }
+       }
+    }
+
+
+    .propectie_supratensiuni{
+        grid-column: 1 / span 4;
+        grid-row: 2;
+        margin-top: 56px;
+
+
+
+
+        @include large{
+            grid-column: 1/7;
+
+            @include small{
+                margin: 0;
+            }
+
+        }
+
+        
+
+        .protectie{
+
+            .protectie_h1{
+                position: relative;
+                z-index: 3;
+                height: 233px;
+                background: #FFFFFF;
+                box-shadow: 5px 4px 13px -1px rgba(0, 0, 0, 0.25);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                @include small{
+                    height: 70px;
+                }
+
+                &:hover{
+                    background-color: $btn-color;
+                }
+
+
+                h2{
+
+                    font-family: Montserrat;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: 42px;
+                    letter-spacing: 0em;
+                    text-align: center;
+
+                    @include medium{
+                        font-size: 20px;
+
+                        @include small{
+                            font-size: 10px;
+                            line-height: 100%;
+                        }
+                    }
+
+
+                }
+
+
+               
+
+            }
+
+
+            
+
+        }
+
+
+
+
+
+        .supratensiuni{
+
+            margin-top: 35px;
+
+
+            @include small{
+                margin: 0;
+            }
+
+            
+
+            
+
+                .protectie_h1{
+                    position: relative;
+                    z-index: 2;
+                    height: 233px;
+                    background: #FFFFFF;
+                    box-shadow: 5px 4px 13px -1px rgba(0, 0, 0, 0.25);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    @include small{
+                        height: 70px;
+                    }
+    
+                    &:hover{
+                        background-color: $btn-color;
+                    }
+    
+    
+                    h2{
+                        padding: 0 72px;
+                        font-family: "Montserrat";
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 42px;
+                        letter-spacing: 0em;
+                        text-align: center;
+
+                        @include medium{
+                            font-size: 20px;
+
+                            @include small{
+                                font-size: 10px;
+                                line-height: 100%;
+                                text-align: center;
+                            }
+                        }
+    
+    
+                    }
+    
+                }
+
+        }
+
+
+        .supratensiuni_hover{
+            display: none;
+            position: absolute;
+            top: 100%;
+            background-color: white;
+            margin-top: 10px;
+            box-shadow: 5px 4px 13px -1px rgba(0, 0, 0, 0.25);
+            z-index: 10;
+
+            @include medium{
+                display: block;
+            }
+
+            
+
+            p{
+                padding: 15px;
+
+                @include small{
+                    font-size: 12px;
+                }
+            }
+          }
+        }
+
+
+
+        .impamantare_solare{
+
+            grid-column: 6 / 10;
+            grid-row: 2;
+            margin-top: 56px;
+
+            
+
+            @include large{
+                grid-column: 7/13;
+
+                @include small{
+                    margin: 0;
+                }
+
+               
+            }
+
+
+            .protectie{
+
+                .protectie_h1{
+                    position: relative;
+                    z-index: 3;
+                    height: 233px;
+                    background: #FFFFFF;
+                    box-shadow: 5px 4px 13px -1px rgba(0, 0, 0, 0.25);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    @include small{
+                        height: 70px;
+                    }
+    
+                    &:hover{
+                        background-color: $btn-color;
+                    }
+    
+    
+                    h2{
+    
+                        font-family: "Montserrat";
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 42px;
+                        letter-spacing: 0em;
+                        text-align: center;
+
+                        @include medium{
+                            font-size: 20px;
+
+                            @include small{
+                                font-size: 10px;
+                                line-height: 100%;
+                            }
+                        }
+    
+    
+                    }
+    
+                }
+
+
+                .supratensiuni_hover{
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 5px 4px 13px -1px rgba(0, 0, 0, 0.25);
+                    z-index: 10;
+
+                    @include medium{
+                        display: block;
+                    }
+        
+                    p{
+                        padding: 15px;
+
+                        @include small{
+                            font-size: 12px;
+                        }
+                    }
+                  }
+    
+            }
+    
+    
+    
+    
+    
+            .supratensiuni{
+    
+                margin-top: 35px;
+
+
+                @include small{
+                    margin: 0;
+                }
+
+                
+    
+                
+    
+                    .protectie_h1{
+                        position: relative;
+                        height: 233px;
+                        background: #FFFFFF;
+                        box-shadow: 5px 4px 13px -1px rgba(0, 0, 0, 0.25);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+
+                        @include small{
+                            height: 70px;
+                        }
+        
+                        &:hover{
+                            background-color: $btn-color;
+                        }
+        
+        
+                        h2{
+                            padding: 0 72px;
+                            font-family: "Montserrat";
+                            font-size: 30px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: 42px;
+                            letter-spacing: 0em;
+                            text-align: center;
+
+
+
+                            @include medium{
+                                font-size: 20px;
+
+                                @include small{
+                                    font-size: 10px;
+                                    line-height: 100%;
+                                }
+                            }
+        
+        
+                        }
+
+
+                        .supratensiuni_hover{
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            background-color: white;
+                            margin-top: 10px;
+                            box-shadow: 5px 4px 13px -1px rgba(0, 0, 0, 0.25);
+
+                            @include medium{
+                                display: block;
+                                z-index: 10;
+                            }
+                
+                            p{
+                                padding: 15px;
+
+                                @include small{
+                                    font-size: 12px;
+                                }
+                            }
+                          }
+        
+                    }
+    
+            }
+
+        }
+
+
+        .img{
+            grid-column: 8 / span 12;
+            z-index: -1;
+            grid-row: 2;
+            position: relative;
+            margin-top: 45px;
+
+            @include medium{
+                display: none;
+            }
+
+
+
+            .img_right{
+                background-color: $color-seconds;
+                height: 528px;
+                width: 340px;
+                position: absolute;
+                right: 0;
+                z-index: -1;
+               
+            }
+
+
+            .img_right_photo{
+                width: 100%;
+                height: 466px;
+                margin: 30px 0 32px 0;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding-right: 28px;
+                }
+            }
+
+
+        }
+
+        .protectie_hover{
+            background-color: rgb(39, 39, 39, .64);
+            backdrop-filter: blur(27px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            max-width: 100%;
+            position: fixed;
+
+            @include medium{
+                display: none;
+            }
+
+            .protectie_inside{
+                padding: 71px 59px;
+                text-align: center;
+                width: 50%;
+                background-color: $color-seconds;
+
+                 h1{
+                     color: white;
+                     font-family: "Montserrat";
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: 42px;
+                    text-align: center;
+                    
+
+                 }
+
+
+                 .p{
+                     color: white;
+                     margin: 45px 0 35px 0;
+                     
+                        font-family: Open Sans;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 25px;
+                        letter-spacing: 0em;
+                        text-align: center;
+                 }
+
+                 .btn-link{
+                    button{
+                        @include btn_click($btn-color);
+                    }
+                 }
+
+                 
+                
+                
+            }
+            
+        }
+
+
+        
+}
+
+
+
+
+
+.paratrasnet_pda{
+    margin-top: 115px;
+
+    @include desktopExtraExtraLarge{
+        width: 90% !important;
+        margin: auto;
+    }
+
+    h1{
+        grid-column: 1/13;
+
+        @include medium{
+            font-size: 20px;
+            margin: 45px 0 0 0;
+        }
+    }
+
+
+    .paratrasnet_pda_img{
+        margin-top: 55px;
+        grid-column: 1/5;
+
+        @include desktopExtraLarge{
+            grid-column: 1/7;
+
+            @include large{
+                grid-column: 1/13;
+            }
+        }
+
+        .paratrasnet_photo{
+            position: relative;
+
+            @include large{
+                width: 60%;
+                height: 500px;
+                margin: auto;
+
+                @include medium{
+                    width: 100%;
+                    height: 500px;
+
+                    @include small{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        margin: auto;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    
+                }
+            }
+
+
+
+            img{
+                width: 100%;
+                box-shadow: -4px 4px 12px 3px rgba(0, 0, 0, 0.12);
+
+                @include desktopExtraLarge{
+                    width: 90% ;
+                    height: 100%;
+                    margin: auto;
+                    object-fit: cover;
+                }
+                
+            }
+
+
+            .background_paratrasnet{
+                width: 82px;
+                height: 287px;
+                background-color: $btn-color;
+                position: absolute;
+                right: -53px;
+                top: 113px;
+                z-index: -1;
+
+                @include desktopExtraLarge{
+                    right: 0px;
+
+                    @include small{
+                        display: none;
+                    }
+                }
+                
+
+            }
+        }
+    }
+
+    .paratrasnet_pda_paragraph{
+        grid-column: 6/13;
+        margin-top: 100px;
+
+        
+
+        @include desktopExtraLarge{
+            grid-column: 7/12;
+
+            @include large{
+                grid-column: 1/13;
+                margin-top: 30px;
+            }
+        }
+
+        p{
+            @include small{
+                font-family: 'Open Sans', sans-serif;
+                font-size: 12px;
+                line-height: 16px;
+                font-family: sans-serif;
+                font-weight: 400;
+                display: block;
+            }
+        }
+
+        h2{
+            margin: 43px 0 26px 0;
+            font-family: Montserrat;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 30px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            @include small{
+                font-family: 'Open Sans', sans-serif;
+                font-size: 18px;
+                line-height: 16px;
+                font-family: sans-serif;
+                font-weight: 800;
+                margin: 20px 0;
+                
+            }
+
+        }
+        
+    }
+}
+
+
+
+
+
+.calitate{
+
+    @include desktopExtraExtraLarge{
+        width: 90% !important;
+        margin: auto;
+    }
+
+    .calitate_img_left{
+        margin-top: 207px;
+        grid-column: 1/7;
+        grid-row: 1;
+        z-index: -1;
+
+        @include large{
+            display: none;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+
+    .calitate_right_elements{
+        grid-column: 6/13;
+        box-shadow: 0px 4px 13px 2px rgba(0, 0, 0, 0.15);
+        grid-row: 1;
+        background-color: white;
+        margin-top: 115px;
+
+        @include large{
+            grid-column: 1/13;
+
+            @include medium{
+                box-shadow: 0px 4px 13px 2px rgba(255, 255, 255, 0.15);
+                
+            }
+        }
+        
+
+        .element_inside{
+            padding: 89px 100px;
+            display: flex;
+            flex-wrap: wrap;
+
+
+            @include desktopExtraExtraLarge{
+                padding: 50px 75px;
+
+
+                @include medium{
+                    padding: 0;
+                }
+            }
+              
+
+
+            }
+
+
+            .element_inside_right{
+                width: 684px;
+                display: flex;
+                margin: auto;
+                justify-content: space-between;
+
+                @include medium{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center; 
+                    width: 100%;  
+                 }
+
+                
+                  
+
+                .element_items{
+                    width: 40%;
+                    text-align: center;
+
+                    @include medium{
+                        text-align: center;
+                        width: 100%;
+                        margin-bottom: 20px;  
+                     }
+
+
+                    h2{
+                        font-family: Montserrat;
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 42px;
+                        letter-spacing: 0em;
+                        text-align: center;
+                        margin: 27px 0 19px 0;
+
+                        @include desktopExtraLarge{
+
+                            font-size: 26px;
+
+                            @include small{
+                                font-size: 18px;
+                            }
+                        }
+
+
+                    }
+
+                    p{
+                        text-align: center;
+                       @include large{
+                           text-align: center;
+
+
+                           @include small{
+                            font-family: 'Open Sans', sans-serif;
+                            font-size: 12px;
+                            line-height: 16px;
+                            font-family: sans-serif;
+                            font-weight: 400;
+                            display: block;
+                        }
+
+                           
+                       }
+                    }
+                    
+                }
+
+                
+
+            }
+
+
+
+            .element_inside_right2{
+                display: flex;
+                margin: 56px auto 0 auto;
+                justify-content: space-between;
+
+
+                @include medium{
+                    flex-direction: column-reverse;
+                }
+
+
+                .element_items{
+                    width: 40%;
+                    text-align: center;
+
+
+                    &:first-of-type{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+
+                    }
+
+
+                    @include desktopExtraExtraLarge{
+                        
+
+
+                        @include medium{
+                            text-align: center;
+                            width: 100%;
+                            margin-bottom: 20px;  
+                         }
+                    }
+
+
+                    h2{
+                        font-family: Montserrat;
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 42px;
+                        letter-spacing: 0em;
+                        text-align: center;
+                        margin: 27px 0 19px 0;
+                        text-align: center;
+
+                        @include small{
+                            font-size: 18px;
+                        }
+
+                    }
+
+                    p{
+                        text-align: center;
+                        @include large{
+                            text-align: center;
+
+                            @include small{
+                                font-family: 'Open Sans', sans-serif;
+                                font-size: 12px;
+                                line-height: 16px;
+                                font-family: sans-serif;
+                                font-weight: 400;
+                                display: block;
+                            }
+ 
+                            
+                        }
+                    }
+                }
+
+
+                
+
+                    .btn-link{
+                        width: 100%;
+                        
+
+                        
+
+                        @include desktopExtraExtraLarge{
+
+                            
+
+                            @include medium{
+                                
+    
+                            }
+                        }
+
+
+
+
+                        button{
+                            color: white;
+                            border: 0;
+                            background-color: #272727;
+                            width: 100%;
+                            padding: 15px 0;
+                            font-size: 18px;
+                            font-family: 'Montserrat', sans-serif;
+
+
+                            @include desktopExtraLarge{
+                                font-size: 14px;
+
+
+
+                                @include large{
+                                    font-size: 16px;
+                                    color: white;
+                    
+                                    @include medium{
+                    
+                                        font-size: 16px;
+                                        width: 160px;
+                    
+                                        @include small{
+                    
+                    
+                                            
+                                            
+                                            font-size: 14px;
+                                            color: white;
+                                        }
+                                    }
+                    
+                                }
+                            }
+                
+                            
+                        }
+
+                    }
+                    
+                   
+                }
+
+                
+
+            }
+
+           
+        }
+    
+
+
+
+
+
+.etapele_de_lucru{
+    margin-top: 115px;
+    position: relative;
+
+    @include desktopExtraExtraLarge{
+        width: 90% !important;
+        margin: auto;
+        
+    }
+
+    h1{
+        grid-column: 1/11;
+
+       @include large{
+           font-size: 40px;
+        @include medium{
+            font-size: 20px;
+            
+        }
+       }
+    }
+
+
+    .indicator{
+        position: relative;
+        grid-column: 11/13;
+        margin-top: 115px;
+        margin-bottom: 55px;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+
+        @include medium{
+           display: block;
+
+           @include small{
+            display: flex;
+            flex-direction: column-reverse;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+            
+        }
+
+        button{
+            display: flex;
+            align-items: center;
+            width: 3rem;
+            cursor: pointer;
+            overflow: hidden;
+            transition: 0.2s linear;
+            @include btn;
+            margin-right: 5px;
+
+                    @include medium{
+
+
+
+                        @include small{
+                            display: block;
+                            overflow: hidden;
+                            width: 2rem;
+                            transition: none;
+                            margin: 0;
+                            padding: 0;
+                        }
+                       
+                        
+                    }
+
+            &:first-of-type {
+                justify-content: flex-start;
+
+                @include small{
+                    display: flex;
+                    justify-content: flex-start;
+                }
+
+               
+            }
+            
+            &:last-of-type {
+                justify-content: flex-end;
+
+                @include small{
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+               
+            }
+
+        
+
+
+            &:hover{
+                width: 4.3rem;
+
+                
+            }
+
+            @include medium{
+                 &:hover{
+                     width: 2rem;
+                 }
+            }
+
+
+            .slider__button-inner{
+                
+
+                svg{
+                    path{
+                        transition: .2s linear;
+                    }
+                }
+
+                &:hover{
+                    svg{
+                        path{
+                            fill-opacity: 1;
+                        }
+                    }
+                }
+            }
+         
+
+        }
+
+        
+    }
+
+
+    .etapa_text{
+        grid-column: 1/5;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+        @include large{
+            grid-column: 1/13;
+        }
+
+
+        h1{
+            font-family: Montserrat;
+            font-size: 90px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 125px;
+            letter-spacing: 0.03em;
+            text-align: center;
+            color: $btn-color;
+
+            @include medium{
+                font-size: 50px;
+                margin:0;
+            }
+        }
+
+        h2{
+            font-family: Montserrat;
+            font-size: 37px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 51px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: $btn-color;
+
+            @include medium{
+                font-size: 20px;
+                
+            }
+
+        }
+    }
+
+
+    .etapa_img{
+        margin-top: 64px;
+        grid-column: 6/13;
+
+        @include large{
+            grid-column: 1/13;
+        }
+
+        &:first-of-type{
+            margin-top: 64px;
+        }
+        
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+.contacteaza-ne{
+    grid-template:1/13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    .btn-link{
+       margin-top: 115px;
+       display: flex;
+       justify-content: center;
+
+       @include large{
+        margin: 25px 0 0 0;
+       
+
+           @include medium{
+             margin: 25px 0 0 0;
+    
+               @include small{
+                  
+                   margin: 25px 0 0 0;
+               }
+           }
+       }
+
+
+         
+        button{
+            @include btn_click($color-seconds);
+            color: white;
+
+            @include large{
+                font-size: 18px;
+                color: white;
+
+                @include medium{
+
+                    font-size: 16px;
+                    color: white;
+                    width: 160px;
+
+                    @include small{
+
+
+                        width: 160px;
+                        height: 40px;
+                        font-size: 14px;
+                        color: white;
+                    }
+                }
+
+            }
+            
+        }
+    }
+}

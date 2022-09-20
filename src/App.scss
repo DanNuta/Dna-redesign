@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import "reset";
+@import "../src/responsive";
+
+$btn-color: #FFD600;
+$color-seconds: #272727;
+$width: 1420px;
+
+
+@mixin btn_click($background){
+    padding: 15px 70px;
+    background-color: $background;
+    color: $color-seconds;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: extra-bold;
+    font-size: 54px;
+    line-height: 122%;
+    color: $color-seconds;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 200;
+    color: $color-seconds;
+    line-height: 38px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+     
+     
+
+    .cookie{
+        background-color: rgb(39, 39, 39, .64);
+        backdrop-filter: blur(27px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        max-width: 100%;
+        position: fixed;
+
+        
+    
+    .inside{
+        background-color: #272727;
+        padding: 40px 100px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 32%;
+
+        @include large{
+            width: 50%;
+
+            @include small{
+                width: 70%;
+                padding: 40px 28px;
+            }
+
+        }
+
+
+
+        img{
+            
+
+            @include small{
+                width: 50%;
+            }
+        }
+    
+        h1{
+            font-family: Montserrat;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 42px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: white;
+            margin: 0;
+
+
+            @include small{
+                font-size: 20px;
+                line-height: 27px;
+            }
+        }
+    
+        p{
+            font-family: Open Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: white;
+            margin: 20px 0 45px 0;
+
+            @include small{
+                font-size: 12px;
+                line-height: 16px;
+                margin: 10px 0 25px 0;
+            }
+        }
+    
+        span{
+    
+            .confidentialitate{
+                color: $btn-color;
+            }
+        }
+    
+    
+    
+        button{
+            @include btn_click($btn-color);
+
+            @include small{
+                padding: 12px 50px;
+                font-size: 14px;
+
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
