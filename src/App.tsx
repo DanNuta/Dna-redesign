@@ -1,5 +1,4 @@
 import { Home } from "./pages/Home";
-import { Container } from "react-bootstrap";
 import { Navbar } from "./components/Navbar/Navbar";
 import {GlobalStyles} from "./components/styles/Global.module";
 

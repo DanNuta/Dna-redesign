@@ -7,7 +7,8 @@ type ButtonProps ={
 
 export const  Button = styled.button<ButtonProps>`
 
- background-color: ${(props: ButtonProps) => props.bg};
+ background-color: transparent;
+ border: none;
 
 
  @media ${device.laptop} {

@@ -8,6 +8,7 @@ import * as Styled from "./Navbar.module";
 import hanburgher from "../../icons/hamburger/menu.png";
 import { VButton } from "../../components/VButton/VButton";
 import wishList from "../../icons/card_product_icon/wish_list.svg";
+import {NavMibile} from "./MobileSlide/Mobile";
 
 type Props = {
   data: NavbarType;
@@ -17,15 +18,16 @@ type Props = {
 };
 
 export const NavbarView: React.FC<PropsWithChildren<Props>> = ( props: PropsWithChildren<Props>) => {
-  console.log(props);
+  
   return (
 
+
+    <>
     <Styled.NavbarNav bg={props.bg}>
 
       <Styled.NavbarUl>
 
         <Styled.NavLi type="center">
-
           <a href="/">
             <img src={Logo} />
           </a>
@@ -51,6 +53,8 @@ export const NavbarView: React.FC<PropsWithChildren<Props>> = ( props: PropsWith
         </Styled.NavLi>
       </Styled.NavbarUl>
 
+      
+
       {/* <Styled.NavMobile>
                   <VButton  bg="red" onClick={props.toggle} > <img src={Navbar} /> </VButton>
                   <li>9:00 - 19:00</li>
@@ -74,5 +78,9 @@ export const NavbarView: React.FC<PropsWithChildren<Props>> = ( props: PropsWith
                  <li><img src={Wishlist} alt="wish_list" /></li>
                </ul> */}
     </Styled.NavbarNav>
+
+{props.toggleState && <NavMibile  data={props.data}/>}
+
+</>
   );
 };
